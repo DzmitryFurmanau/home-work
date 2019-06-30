@@ -1,7 +1,7 @@
 package com.autoPartsStore.app.dao.impl;
 
-import com.autoPartsStore.app.domain.Seller;
 import com.autoPartsStore.app.dao.SellerDao;
+import com.autoPartsStore.app.domain.Seller;
 
 public class SellerDaoImpl implements SellerDao {
 
