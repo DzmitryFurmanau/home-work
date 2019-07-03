@@ -1,6 +1,5 @@
 package com.autoPartsStore.app.dao;
 
-
 public interface GenericDao {
 
     Object save(Object object);

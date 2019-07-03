@@ -6,7 +6,6 @@ import com.autoPartsStore.app.domain.Employee;
 import com.autoPartsStore.app.domain.Seller;
 import com.autoPartsStore.app.service.SellerService;
 
-
 public class SellerServiceImpl implements SellerService {
 
     private static SellerService instance;

@@ -1,6 +1,5 @@
 package com.autoPartsStore.app.domain;
 
-
 abstract public class Employee {
     private String name;
 

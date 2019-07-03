@@ -1,6 +1,7 @@
 package com.autoPartsStore.app.domain;
 
 public class Seller extends Employee {
+
     private Integer category;
 
     public Seller(String name, Integer age, Integer salary, Integer category) {

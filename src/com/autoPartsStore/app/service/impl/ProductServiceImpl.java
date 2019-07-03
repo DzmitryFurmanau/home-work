@@ -5,7 +5,6 @@ import com.autoPartsStore.app.dao.impl.ProductDaoImpl;
 import com.autoPartsStore.app.domain.Product;
 import com.autoPartsStore.app.service.ProductService;
 
-
 public class ProductServiceImpl implements ProductService {
 
     private static ProductService instance;

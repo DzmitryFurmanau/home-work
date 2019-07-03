@@ -6,7 +6,6 @@ import com.autoPartsStore.app.domain.Employee;
 import com.autoPartsStore.app.domain.Heaver;
 import com.autoPartsStore.app.service.HeaverService;
 
-
 public class HeaverServiceImpl implements HeaverService {
 
     private static HeaverService instance;

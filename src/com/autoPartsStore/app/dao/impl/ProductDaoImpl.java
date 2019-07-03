@@ -1,6 +1,5 @@
 package com.autoPartsStore.app.dao.impl;
 
-
 import com.autoPartsStore.app.dao.ProductDao;
 import com.autoPartsStore.app.domain.Product;
 

@@ -1,6 +1,5 @@
 package com.autoPartsStore.app.service;
 
-
 import com.autoPartsStore.app.domain.Employee;
 
 public interface EmployeeService extends GenericService {

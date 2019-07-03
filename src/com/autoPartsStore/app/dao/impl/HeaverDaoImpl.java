@@ -1,6 +1,5 @@
 package com.autoPartsStore.app.dao.impl;
 
-
 import com.autoPartsStore.app.dao.HeaverDao;
 import com.autoPartsStore.app.domain.Heaver;
 
