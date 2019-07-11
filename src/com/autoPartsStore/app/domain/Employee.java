@@ -1,6 +1,7 @@
 package com.autoPartsStore.app.domain;
 
 public abstract class Employee {
+    
     private String name;
 
     private Integer age;
