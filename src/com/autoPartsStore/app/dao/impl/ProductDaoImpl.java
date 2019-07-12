@@ -3,6 +3,9 @@ package com.autoPartsStore.app.dao.impl;
 import com.autoPartsStore.app.dao.ProductDao;
 import com.autoPartsStore.app.domain.Product;
 
+import java.util.Collection;
+import java.util.List;
+
 public class ProductDaoImpl implements ProductDao {
 
     private static ProductDao instance;
@@ -19,32 +22,32 @@ public class ProductDaoImpl implements ProductDao {
     }
 
     @Override
-    public Product[] getByPrice(Double price) {
-        return new Product[0];
-    }
-
-    @Override
-    public Product save(Object object) {
+    public List<Product> getByPrice(Double price) {
         return null;
     }
 
     @Override
-    public Product update(Object object) {
+    public Product save(Product object) {
         return null;
     }
 
     @Override
-    public Product[] getAll() {
-        return new Product[0];
-    }
-
-    @Override
-    public Object getByName(String Name) {
+    public Product update(Product object) {
         return null;
     }
 
     @Override
-    public void delete(Object object) {
+    public Collection<Product> getAll() {
+        return null;
+    }
+
+    @Override
+    public Product getByName(String Name) {
+        return null;
+    }
+
+    @Override
+    public void delete(Product object) {
 
     }
 

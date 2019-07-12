@@ -2,9 +2,10 @@ package com.autoPartsStore.app.service.impl;
 
 import com.autoPartsStore.app.dao.SellerDao;
 import com.autoPartsStore.app.dao.impl.SellerDaoImpl;
-import com.autoPartsStore.app.domain.Employee;
 import com.autoPartsStore.app.domain.Seller;
 import com.autoPartsStore.app.service.SellerService;
+
+import java.util.Set;
 
 public class SellerServiceImpl implements SellerService {
 
@@ -24,42 +25,47 @@ public class SellerServiceImpl implements SellerService {
     }
 
     @Override
-    public boolean fire(Employee employee) {
-        return false;
-    }
-
-    @Override
-    public boolean hire(Employee employee) {
-        return false;
-    }
-
-    @Override
-    public boolean promote(Employee employee) {
-        return false;
-    }
-
-    @Override
-    public Object save(Object object) {
+    public Seller getByCategory(Integer category) {
         return null;
     }
 
     @Override
-    public Object update(Object object) {
+    public boolean fire(Seller employee) {
+        return false;
+    }
+
+    @Override
+    public boolean hire(Seller employee) {
+        return false;
+    }
+
+    @Override
+    public boolean promote(Seller employee) {
+        return false;
+    }
+
+    @Override
+    public Seller save(Seller object) {
         return null;
     }
 
     @Override
-    public Object[] getAll() {
-        return new Object[0];
-    }
-
-    @Override
-    public Object getByName(String name) {
+    public Seller update(Seller object) {
         return null;
     }
 
     @Override
-    public void delete(Object object) {
+    public Set<Seller> getAll() {
+        return null;
+    }
+
+    @Override
+    public Seller getByName(String name) {
+        return null;
+    }
+
+    @Override
+    public void delete(Seller object) {
 
     }
 
@@ -71,10 +77,5 @@ public class SellerServiceImpl implements SellerService {
     @Override
     public void deleteByName(String name) {
 
-    }
-
-    @Override
-    public Seller getByCategory(Integer category) {
-        return null;
     }
 }

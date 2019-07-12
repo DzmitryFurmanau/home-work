@@ -2,7 +2,9 @@ package com.autoPartsStore.app.dao;
 
 import com.autoPartsStore.app.domain.Product;
 
-public interface ProductDao extends GenericDao {
+import java.util.List;
 
-    Product[] getByPrice(Double price);
+public interface ProductDao extends GenericDao<Product> {
+
+    List<Product> getByPrice(Double price);
 }

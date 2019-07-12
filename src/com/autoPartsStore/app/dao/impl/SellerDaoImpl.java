@@ -3,6 +3,8 @@ package com.autoPartsStore.app.dao.impl;
 import com.autoPartsStore.app.dao.SellerDao;
 import com.autoPartsStore.app.domain.Seller;
 
+import java.util.Collection;
+
 public class SellerDaoImpl implements SellerDao {
 
     private static SellerDao instance;
@@ -24,27 +26,27 @@ public class SellerDaoImpl implements SellerDao {
     }
 
     @Override
-    public Seller save(Object object) {
+    public Seller save(Seller object) {
         return null;
     }
 
     @Override
-    public Seller update(Object object) {
+    public Seller update(Seller object) {
         return null;
     }
 
     @Override
-    public Seller[] getAll() {
-        return new Seller[0];
-    }
-
-    @Override
-    public Seller getByName(String name) {
+    public Collection<Seller> getAll() {
         return null;
     }
 
     @Override
-    public void delete(Object object) {
+    public Seller getByName(String Name) {
+        return null;
+    }
+
+    @Override
+    public void delete(Seller object) {
 
     }
 

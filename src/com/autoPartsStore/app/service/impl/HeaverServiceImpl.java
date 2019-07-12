@@ -2,9 +2,10 @@ package com.autoPartsStore.app.service.impl;
 
 import com.autoPartsStore.app.dao.HeaverDao;
 import com.autoPartsStore.app.dao.impl.HeaverDaoImpl;
-import com.autoPartsStore.app.domain.Employee;
 import com.autoPartsStore.app.domain.Heaver;
 import com.autoPartsStore.app.service.HeaverService;
+
+import java.util.Set;
 
 public class HeaverServiceImpl implements HeaverService {
 
@@ -23,43 +24,49 @@ public class HeaverServiceImpl implements HeaverService {
         return instance;
     }
 
-    @Override
-    public boolean fire(Employee employee) {
-        return false;
-    }
 
     @Override
-    public boolean hire(Employee employee) {
-        return false;
-    }
-
-    @Override
-    public boolean promote(Employee employee) {
-        return false;
-    }
-
-    @Override
-    public Object save(Object object) {
+    public Heaver getByBonus(Integer bonus) {
         return null;
     }
 
     @Override
-    public Object update(Object object) {
+    public boolean fire(Heaver employee) {
+        return false;
+    }
+
+    @Override
+    public boolean hire(Heaver employee) {
+        return false;
+    }
+
+    @Override
+    public boolean promote(Heaver employee) {
+        return false;
+    }
+
+    @Override
+    public Heaver save(Heaver object) {
         return null;
     }
 
     @Override
-    public Object[] getAll() {
-        return new Object[0];
-    }
-
-    @Override
-    public Object getByName(String name) {
+    public Heaver update(Heaver object) {
         return null;
     }
 
     @Override
-    public void delete(Object object) {
+    public Set<Heaver> getAll() {
+        return null;
+    }
+
+    @Override
+    public Heaver getByName(String name) {
+        return null;
+    }
+
+    @Override
+    public void delete(Heaver object) {
 
     }
 
@@ -71,10 +78,5 @@ public class HeaverServiceImpl implements HeaverService {
     @Override
     public void deleteByName(String name) {
 
-    }
-
-    @Override
-    public Heaver getByBonus(Integer bonus) {
-        return null;
     }
 }
