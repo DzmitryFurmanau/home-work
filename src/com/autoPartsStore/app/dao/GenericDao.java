@@ -3,6 +3,7 @@ package com.autoPartsStore.app.dao;
 import java.util.Collection;
 
 import java.util.Optional;
+import java.util.function.Supplier;
 
 public interface GenericDao<T> {
 
@@ -12,7 +13,7 @@ public interface GenericDao<T> {
 
     Collection<T> getAll();
 
-    Optional<T> getByName(String Name);
+    Supplier<T> getByName(String Name);
 
     void delete(T object);
 

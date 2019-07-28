@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 public class ProductDaoImpl implements ProductDao {
 
@@ -50,8 +51,8 @@ public class ProductDaoImpl implements ProductDao {
     }
 
     @Override
-    public Optional<Product> getByName(String Name) {
-        return Optional.empty();
+    public Supplier<Product> getByName(String Name) {
+        return Product::new;
     }
 
     @Override

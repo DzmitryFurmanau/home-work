@@ -6,6 +6,7 @@ import com.autoPartsStore.app.domain.Heaver;
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
+import java.util.function.Supplier;
 
 public class HeaverDaoImpl implements HeaverDao {
 
@@ -43,8 +44,8 @@ public class HeaverDaoImpl implements HeaverDao {
     }
 
     @Override
-    public Optional<Heaver> getByName(String Name) {
-        return Optional.empty();
+    public Supplier<Heaver> getByName(String Name) {
+        return Heaver::new;
     }
 
     @Override

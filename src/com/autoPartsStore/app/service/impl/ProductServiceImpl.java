@@ -9,6 +9,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 public class ProductServiceImpl implements ProductService {
 
@@ -53,7 +54,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Optional<Product> getByName(String name) {
+    public Supplier<Product> getByName(String name) {
         return productDao.getByName(name);
     }
 

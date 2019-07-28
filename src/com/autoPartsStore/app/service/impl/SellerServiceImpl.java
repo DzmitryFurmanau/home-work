@@ -7,6 +7,7 @@ import com.autoPartsStore.app.service.SellerService;
 
 import java.util.Optional;
 import java.util.Set;
+import java.util.function.Supplier;
 
 public class SellerServiceImpl implements SellerService {
 
@@ -61,7 +62,7 @@ public class SellerServiceImpl implements SellerService {
     }
 
     @Override
-    public Optional<Seller> getByName(String name) {
+    public Supplier<Seller> getByName(String name) {
         return sellerDao.getByName(name);
     }
 

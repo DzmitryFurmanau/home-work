@@ -7,6 +7,7 @@ import com.autoPartsStore.app.service.HeaverService;
 
 import java.util.Optional;
 import java.util.Set;
+import java.util.function.Supplier;
 
 public class HeaverServiceImpl implements HeaverService {
 
@@ -61,7 +62,7 @@ public class HeaverServiceImpl implements HeaverService {
     }
 
     @Override
-    public Optional<Heaver> getByName(String name) {
+    public Supplier<Heaver> getByName(String name) {
         return heaverDao.getByName(name);
     }
 

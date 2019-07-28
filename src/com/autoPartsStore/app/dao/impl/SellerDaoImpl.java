@@ -6,6 +6,7 @@ import com.autoPartsStore.app.domain.Seller;
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
+import java.util.function.Supplier;
 
 public class SellerDaoImpl implements SellerDao {
 
@@ -43,8 +44,8 @@ public class SellerDaoImpl implements SellerDao {
     }
 
     @Override
-    public Optional<Seller> getByName(String Name) {
-        return Optional.empty();
+    public Supplier<Seller> getByName(String Name) {
+        return Seller::new;
     }
 
     @Override
