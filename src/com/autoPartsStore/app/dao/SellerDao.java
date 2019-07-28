@@ -2,7 +2,9 @@ package com.autoPartsStore.app.dao;
 
 import com.autoPartsStore.app.domain.Seller;
 
-public interface SellerDao extends GenericDao<Seller> {
+import java.util.Optional;
 
-    Seller getByCategory(Integer category);
+public interface SellerDao extends EmployeeDao<Seller> {
+
+    Optional<Seller> getByCategory(Integer category);
 }

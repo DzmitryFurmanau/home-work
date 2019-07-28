@@ -1,16 +1,17 @@
 package com.autoPartsStore.app.service;
 
 import java.util.Collection;
+import java.util.Optional;
 
 public interface GenericService<T> {
 
-    T save(T object);
+    Optional<T> save(T object);
 
-    T update(T object);
+    Optional<T> update(T object);
 
     Collection<T> getAll();
 
-    T getByName(String name);
+    Optional<T> getByName(String name);
 
     void delete(T object);
 

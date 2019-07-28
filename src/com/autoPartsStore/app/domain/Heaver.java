@@ -20,5 +20,4 @@ public class Heaver extends Employee {
     public void setBonus(Integer bonus) {
         this.bonus = bonus;
     }
-
 }

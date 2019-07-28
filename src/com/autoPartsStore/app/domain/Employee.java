@@ -7,12 +7,12 @@ public abstract class Employee {
     private Integer age;
 
     private Integer salary;
-
-    public Employee() {
+    //TODO update to public
+    Employee() {
 
     }
-
-    public Employee(String name, Integer age, Integer salary) {
+    //TODO update to public
+    Employee(String name, Integer age, Integer salary) {
         this.name = name;
         this.age = age;
         this.salary = salary;
@@ -41,5 +41,4 @@ public abstract class Employee {
     public void setSalary(Integer salary) {
         this.salary = salary;
     }
-
 }

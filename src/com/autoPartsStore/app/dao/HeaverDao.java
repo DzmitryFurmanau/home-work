@@ -2,7 +2,9 @@ package com.autoPartsStore.app.dao;
 
 import com.autoPartsStore.app.domain.Heaver;
 
-public interface HeaverDao extends GenericDao<Heaver> {
+import java.util.Optional;
 
-    Heaver getByBonus(Integer bonus);
+public interface HeaverDao extends EmployeeDao<Heaver> {
+
+    Optional<Heaver> getByBonus(Integer bonus);
 }

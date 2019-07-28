@@ -5,6 +5,7 @@ import com.autoPartsStore.app.dao.impl.SellerDaoImpl;
 import com.autoPartsStore.app.domain.Seller;
 import com.autoPartsStore.app.service.SellerService;
 
+import java.util.Optional;
 import java.util.Set;
 
 public class SellerServiceImpl implements SellerService {
@@ -25,13 +26,13 @@ public class SellerServiceImpl implements SellerService {
     }
 
     @Override
-    public Seller getByCategory(Integer category) {
-        return null;
+    public Optional<Seller> getByCategory(Integer category) {
+        return sellerDao.getByCategory(category);
     }
 
     @Override
     public boolean fire(Seller employee) {
-        return false;
+        return true;
     }
 
     @Override
@@ -41,27 +42,27 @@ public class SellerServiceImpl implements SellerService {
 
     @Override
     public boolean promote(Seller employee) {
-        return false;
+        return true;
     }
 
     @Override
-    public Seller save(Seller object) {
-        return null;
+    public Optional<Seller> save(Seller object) {
+        return sellerDao.save(object);
     }
 
     @Override
-    public Seller update(Seller object) {
-        return null;
+    public Optional<Seller> update(Seller object) {
+        return sellerDao.update(object);
     }
 
     @Override
     public Set<Seller> getAll() {
-        return null;
+        return sellerDao.getAll();
     }
 
     @Override
-    public Seller getByName(String name) {
-        return null;
+    public Optional<Seller> getByName(String name) {
+        return sellerDao.getByName(name);
     }
 
     @Override

@@ -3,7 +3,9 @@ package com.autoPartsStore.app.dao.impl;
 import com.autoPartsStore.app.dao.HeaverDao;
 import com.autoPartsStore.app.domain.Heaver;
 
-import java.util.Collection;
+import java.util.HashSet;
+import java.util.Optional;
+import java.util.Set;
 
 public class HeaverDaoImpl implements HeaverDao {
 
@@ -21,28 +23,28 @@ public class HeaverDaoImpl implements HeaverDao {
     }
 
     @Override
-    public Heaver getByBonus(Integer bonus) {
-        return null;
+    public Optional<Heaver> getByBonus(Integer bonus) {
+        return Optional.empty();
     }
 
     @Override
-    public Heaver save(Heaver object) {
-        return null;
+    public Optional<Heaver> save(Heaver object) {
+        return Optional.empty();
     }
 
     @Override
-    public Heaver update(Heaver object) {
-        return null;
+    public Optional<Heaver> update(Heaver object) {
+        return Optional.empty();
     }
 
     @Override
-    public Collection<Heaver> getAll() {
-        return null;
+    public Set<Heaver> getAll() {
+        return new HashSet<>();
     }
 
     @Override
-    public Heaver getByName(String Name) {
-        return null;
+    public Optional<Heaver> getByName(String Name) {
+        return Optional.empty();
     }
 
     @Override

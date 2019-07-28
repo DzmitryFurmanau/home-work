@@ -3,7 +3,9 @@ package com.autoPartsStore.app.dao.impl;
 import com.autoPartsStore.app.dao.SellerDao;
 import com.autoPartsStore.app.domain.Seller;
 
-import java.util.Collection;
+import java.util.HashSet;
+import java.util.Optional;
+import java.util.Set;
 
 public class SellerDaoImpl implements SellerDao {
 
@@ -21,28 +23,28 @@ public class SellerDaoImpl implements SellerDao {
     }
 
     @Override
-    public Seller getByCategory(Integer category) {
-        return null;
+    public Optional<Seller> getByCategory(Integer category) {
+        return Optional.empty();
     }
 
     @Override
-    public Seller save(Seller object) {
-        return null;
+    public Optional<Seller> save(Seller object) {
+        return Optional.empty();
     }
 
     @Override
-    public Seller update(Seller object) {
-        return null;
+    public Optional<Seller> update(Seller object) {
+        return Optional.empty();
     }
 
     @Override
-    public Collection<Seller> getAll() {
-        return null;
+    public Set<Seller> getAll() {
+        return new HashSet<>();
     }
 
     @Override
-    public Seller getByName(String Name) {
-        return null;
+    public Optional<Seller> getByName(String Name) {
+        return Optional.empty();
     }
 
     @Override

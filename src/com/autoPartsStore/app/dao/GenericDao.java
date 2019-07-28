@@ -2,15 +2,17 @@ package com.autoPartsStore.app.dao;
 
 import java.util.Collection;
 
+import java.util.Optional;
+
 public interface GenericDao<T> {
 
-    T save(T object);
+    Optional<T> save(T object);
 
-    T update(T object);
+    Optional<T> update(T object);
 
     Collection<T> getAll();
 
-    T getByName(String Name);
+    Optional<T> getByName(String Name);
 
     void delete(T object);
 

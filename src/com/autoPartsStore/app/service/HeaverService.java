@@ -2,7 +2,9 @@ package com.autoPartsStore.app.service;
 
 import com.autoPartsStore.app.domain.Heaver;
 
+import java.util.Optional;
+
 public interface HeaverService extends EmployeeService<Heaver> {
 
-    Heaver getByBonus(Integer bonus);
+    Optional<Heaver> getByBonus(Integer bonus);
 }

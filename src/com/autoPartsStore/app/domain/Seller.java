@@ -20,5 +20,4 @@ public class Seller extends Employee {
     public void setCategory(Integer category) {
         this.category = category;
     }
-
 }

@@ -2,7 +2,9 @@ package com.autoPartsStore.app.service;
 
 import com.autoPartsStore.app.domain.Seller;
 
+import java.util.Optional;
+
 public interface SellerService extends EmployeeService<Seller> {
 
-    Seller getByCategory(Integer category);
+    Optional<Seller> getByCategory(Integer category);
 }
