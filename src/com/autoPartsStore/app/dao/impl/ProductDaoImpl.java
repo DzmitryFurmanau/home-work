@@ -5,7 +5,9 @@ import com.autoPartsStore.app.domain.Product;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
+import java.util.function.Predicate;
 
 public class ProductDaoImpl implements ProductDao {
 
@@ -28,8 +30,8 @@ public class ProductDaoImpl implements ProductDao {
     }
 
     @Override
-    public Optional<Product> sale(Integer count) {
-        return Optional.empty();
+    public Predicate<Product> sale(Integer count) {
+        return Objects::isNull;
     }
 
     @Override

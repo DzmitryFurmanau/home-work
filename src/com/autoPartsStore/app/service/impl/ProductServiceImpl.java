@@ -8,6 +8,7 @@ import com.autoPartsStore.app.service.ProductService;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Predicate;
 
 public class ProductServiceImpl implements ProductService {
 
@@ -32,7 +33,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Optional<Product> sale(Integer count) {
+    public Predicate<Product> sale(Integer count) {
         return productDao.sale(count);
     }
 
