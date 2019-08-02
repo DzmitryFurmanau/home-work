@@ -8,10 +8,10 @@ import com.autoPartsStore.app.service.ProductService;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
 
 public class ProductServiceImpl implements ProductService {
+
+    private static String path = "D:\\work\\product.txt";
 
     private static ProductService instance;
 
@@ -34,13 +34,14 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Predicate<Product> sale(Integer count) {
-        return productDao.sale(count);
+    //TODO update method arguments
+    public Optional<Product> sale(Integer count) {
+        return Optional.empty();
     }
 
     @Override
     public Optional<Product> save(Product object) {
-        return productDao.save(object);
+        return productDao.save(path, object);
     }
 
     @Override
@@ -54,7 +55,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Supplier<Product> getByName(String name) {
+    public Optional<Product> getByName(String name) {
         return productDao.getByName(name);
     }
 

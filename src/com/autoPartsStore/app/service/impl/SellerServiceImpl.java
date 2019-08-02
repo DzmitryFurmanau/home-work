@@ -7,7 +7,6 @@ import com.autoPartsStore.app.service.SellerService;
 
 import java.util.Optional;
 import java.util.Set;
-import java.util.function.Supplier;
 
 public class SellerServiceImpl implements SellerService {
 
@@ -32,23 +31,29 @@ public class SellerServiceImpl implements SellerService {
     }
 
     @Override
+    //TODO
     public boolean fire(Seller employee) {
-        return true;
+        return false;
     }
 
     @Override
+    //TODO
     public boolean hire(Seller employee) {
         return false;
     }
 
     @Override
+    //TODO
     public boolean promote(Seller employee) {
-        return true;
+        return false;
     }
 
     @Override
+    //TODO
     public Optional<Seller> save(Seller object) {
-        return sellerDao.save(object);
+
+        // return sellerDao.save(object);
+        return Optional.empty();
     }
 
     @Override
@@ -62,7 +67,7 @@ public class SellerServiceImpl implements SellerService {
     }
 
     @Override
-    public Supplier<Seller> getByName(String name) {
+    public Optional<Seller> getByName(String name) {
         return sellerDao.getByName(name);
     }
 

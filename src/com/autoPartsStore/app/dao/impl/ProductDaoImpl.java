@@ -5,12 +5,11 @@ import com.autoPartsStore.app.domain.Product;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
 
-public class ProductDaoImpl implements ProductDao {
+import static java.util.Optional.empty;
+
+public class ProductDaoImpl extends GenericDaoImpl<Product> implements ProductDao {
 
     private static ProductDao instance;
 
@@ -31,18 +30,13 @@ public class ProductDaoImpl implements ProductDao {
     }
 
     @Override
-    public Predicate<Product> sale(Integer count) {
-        return Objects::isNull;
-    }
-
-    @Override
-    public Optional<Product> save(Product object) {
-        return Optional.empty();
+    public Optional<Product> save(String path, Product object) {
+        return super.save(path, object);
     }
 
     @Override
     public Optional<Product> update(Product object) {
-        return Optional.empty();
+        return empty();
     }
 
     @Override
@@ -51,8 +45,8 @@ public class ProductDaoImpl implements ProductDao {
     }
 
     @Override
-    public Supplier<Product> getByName(String Name) {
-        return Product::new;
+    public Optional<Product> getByName(String Name) {
+        return empty();
     }
 
     @Override

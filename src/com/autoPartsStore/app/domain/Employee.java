@@ -1,21 +1,32 @@
 package com.autoPartsStore.app.domain;
 
-public abstract class Employee {
+import java.io.Serializable;
 
+abstract public class Employee extends BaseEntity implements Serializable {
+    private Long id;
     private String name;
-
     private Integer age;
-
     private Integer salary;
-    //TODO update to public
+
     Employee() {
 
     }
-    //TODO update to public
-    Employee(String name, Integer age, Integer salary) {
+
+    Employee(Long id, String name, Integer age, Integer salary) {
+        this.id = id;
         this.name = name;
         this.age = age;
         this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", salary=" + salary +
+                '}';
     }
 
     public String getName() {
@@ -26,7 +37,7 @@ public abstract class Employee {
         this.name = name;
     }
 
-    public Integer getAge() {
+    Integer getAge() {
         return age;
     }
 
@@ -34,11 +45,19 @@ public abstract class Employee {
         this.age = age;
     }
 
-    public Integer getSalary() {
+    Integer getSalary() {
         return salary;
     }
 
     public void setSalary(Integer salary) {
         this.salary = salary;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

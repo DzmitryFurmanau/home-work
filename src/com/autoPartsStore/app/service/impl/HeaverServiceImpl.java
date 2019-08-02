@@ -7,7 +7,6 @@ import com.autoPartsStore.app.service.HeaverService;
 
 import java.util.Optional;
 import java.util.Set;
-import java.util.function.Supplier;
 
 public class HeaverServiceImpl implements HeaverService {
 
@@ -33,22 +32,29 @@ public class HeaverServiceImpl implements HeaverService {
 
     @Override
     public boolean fire(Heaver employee) {
+        //TODO add some logic
+        heaverDao.delete(employee);
         return true;
     }
 
     @Override
     public boolean hire(Heaver employee) {
-        return false;
+        //TODO add some logic
+        //TODO heaverDao.save(employee);
+        return true;
     }
 
     @Override
     public boolean promote(Heaver employee) {
+        //TODO add some logic
+        heaverDao.update(employee);
         return true;
     }
 
     @Override
     public Optional<Heaver> save(Heaver object) {
-        return heaverDao.save(object);
+        //TODO return heaverDao.save(object);
+        return Optional.empty();
     }
 
     @Override
@@ -62,7 +68,7 @@ public class HeaverServiceImpl implements HeaverService {
     }
 
     @Override
-    public Supplier<Heaver> getByName(String name) {
+    public Optional<Heaver> getByName(String name) {
         return heaverDao.getByName(name);
     }
 

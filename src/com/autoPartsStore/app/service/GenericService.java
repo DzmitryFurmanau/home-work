@@ -2,7 +2,6 @@ package com.autoPartsStore.app.service;
 
 import java.util.Collection;
 import java.util.Optional;
-import java.util.function.Supplier;
 
 public interface GenericService<T> {
 
@@ -12,7 +11,7 @@ public interface GenericService<T> {
 
     Collection<T> getAll();
 
-    Supplier<T> getByName(String name);
+    Optional<T> getByName(String name);
 
     void delete(T object);
 

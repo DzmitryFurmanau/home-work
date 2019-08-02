@@ -6,7 +6,8 @@ import com.autoPartsStore.app.domain.Seller;
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
-import java.util.function.Supplier;
+
+import static java.util.Optional.empty;
 
 public class SellerDaoImpl implements SellerDao {
 
@@ -25,17 +26,17 @@ public class SellerDaoImpl implements SellerDao {
 
     @Override
     public Optional<Seller> getByCategory(Integer category) {
-        return Optional.empty();
+        return empty();
     }
 
     @Override
-    public Optional<Seller> save(Seller object) {
-        return Optional.empty();
+    public Optional<Seller> save(String path,Seller object) {
+        return empty();
     }
 
     @Override
     public Optional<Seller> update(Seller object) {
-        return Optional.empty();
+        return empty();
     }
 
     @Override
@@ -44,8 +45,8 @@ public class SellerDaoImpl implements SellerDao {
     }
 
     @Override
-    public Supplier<Seller> getByName(String Name) {
-        return Seller::new;
+    public Optional<Seller> getByName(String Name) {
+        return empty();
     }
 
     @Override
