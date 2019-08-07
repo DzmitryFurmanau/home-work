@@ -4,6 +4,7 @@ import com.autoPartsStore.app.annotation.FileStorage;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.Properties;
 
@@ -40,7 +41,7 @@ public class FileStoragePathProcessor {
     private String getPath(String name) {
         try (InputStream input = this.getClass().getClassLoader().getResourceAsStream("application.properties")) {
             Properties prop = new Properties();
-            prop.load(input);
+            prop.load(Objects.requireNonNull(input));
             final String root = prop.getProperty("dao.file.root");
             final String format = prop.getProperty("dao.file.format");
             return root + name + format;

@@ -15,12 +15,12 @@ import static java.util.stream.Collectors.toList;
 
 public abstract class GenericDaoImpl<T extends BaseEntity> implements GenericDao<T> {
 
-    final Writer<String> writer;
-    final Reader<String> reader;
-    final Function<Object, T> mapper;
+    private final Writer<String> writer;
+    private final Reader<String> reader;
+    private final Function<Object, T> mapper;
     private final String path;
 
-    protected GenericDaoImpl(Class<T> typeParameterClass, Function<Object, T> mapper) {
+    GenericDaoImpl(Class<T> typeParameterClass, Function<Object, T> mapper) {
         this.writer = TextFileWriterImpl.getInstance();
         this.reader = TextFileReaderImpl.getInstance();
         this.mapper = mapper;

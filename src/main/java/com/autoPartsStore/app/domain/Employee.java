@@ -29,7 +29,7 @@ abstract public class Employee extends BaseEntity implements Serializable {
                 '}';
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
