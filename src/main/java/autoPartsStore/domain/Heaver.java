@@ -1,5 +1,8 @@
 package main.java.autoPartsStore.domain;
 
+import main.java.autoPartsStore.annotation.FileStorage;
+
+@FileStorage(name = "Heaver")
 public class Heaver extends Employee {
 
     private Integer bonus;

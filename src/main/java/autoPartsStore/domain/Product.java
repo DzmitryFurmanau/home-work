@@ -1,7 +1,10 @@
 package main.java.autoPartsStore.domain;
 
+import main.java.autoPartsStore.annotation.FileStorage;
+
 import java.io.Serializable;
 
+@FileStorage(name = "Product")
 public class Product extends BaseEntity implements Serializable {
     private Long id;
     private String name;

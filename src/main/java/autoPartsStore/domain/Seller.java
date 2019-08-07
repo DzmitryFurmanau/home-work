@@ -1,5 +1,8 @@
 package main.java.autoPartsStore.domain;
 
+import main.java.autoPartsStore.annotation.FileStorage;
+
+@FileStorage(name = "Seller")
 public class Seller extends Employee {
     private Integer category;
 
