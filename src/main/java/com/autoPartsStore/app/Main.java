@@ -27,17 +27,17 @@ public class Main {
         main.productService.deleteAll();
         main.sellerService.deleteAll();
         //TODO why idea writes different streams to console?
-        main.heaverService.save(new Heaver(1L, "Vasiliy", 20, 500, 100));
-        main.heaverService.save(new Heaver(2L, "Pyotr", 30, 700, 150));
-        main.heaverService.save(new Heaver(3L, "Ivan", 40, 800, 150));
+        main.heaverService.save(new Heaver(6342L, "Vasiliy", 20, 500, 100));
+        main.heaverService.save(new Heaver(5271L, "Pyotr", 30, 700, 150));
+        main.heaverService.save(new Heaver(9641L, "Ivan", 40, 800, 150));
         main.heaverService.getAll().forEach(System.out::println);
-        main.productService.save(new Product(3L, "Oil \"Mannol\"", 80, 10.58));
-        main.productService.save(new Product(1L, "Oil \"Lukoil\"", 190, 12.13));
-        main.productService.save(new Product(2L, "Radiator \"Tesla\"", 1, 15.36));
+        main.productService.save(new Product(456L, "Oil \"Mannol\"", 80, 10.58));
+        main.productService.save(new Product(952L, "Oil \"Lukoil\"", 190, 12.13));
+        main.productService.save(new Product(341L, "Radiator \"Tesla\"", 1, 15.36));
         main.productService.getAll().forEach(System.out::println);
-        main.sellerService.save(new Seller(1L, "Nataliya", 25, 600, 2));
-        main.sellerService.save(new Seller(2L, "Tatiana", 35, 700, 1));
-        main.sellerService.save(new Seller(3L, "Olga", 45, 700, 1));
+        main.sellerService.save(new Seller(73L, "Nataliya", 25, 600, 2));
+        main.sellerService.save(new Seller(52L, "Tatiana", 35, 700, 1));
+        main.sellerService.save(new Seller(19L, "Olga", 45, 700, 1));
         main.sellerService.getAll().forEach(System.out::println);
     }
 }
