@@ -31,9 +31,9 @@ public class Main {
         main.heaverService.save(new Heaver(2L, "Pyotr", 30, 700, 150));
         main.heaverService.save(new Heaver(3L, "Ivan", 40, 800, 150));
         main.heaverService.getAll().forEach(System.out::println);
-        main.productService.save(new Product(1L, "Oil \"Mannol\"", 80, 10.58));
-        main.productService.save(new Product(2L, "Oil \"Lukoil\"", 190, 12.13));
-        main.productService.save(new Product(3L, "Radiator \"Tesla\"", 1, 15.36));
+        main.productService.save(new Product(3L, "Oil \"Mannol\"", 80, 10.58));
+        main.productService.save(new Product(1L, "Oil \"Lukoil\"", 190, 12.13));
+        main.productService.save(new Product(2L, "Radiator \"Tesla\"", 1, 15.36));
         main.productService.getAll().forEach(System.out::println);
         main.sellerService.save(new Seller(1L, "Nataliya", 25, 600, 2));
         main.sellerService.save(new Seller(2L, "Tatiana", 35, 700, 1));
