@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductDaoImpl extends GenericDaoImpl<Product> implements ProductDao {
-
     private static ProductDao instance;
 
     private ProductDaoImpl() {
@@ -21,9 +20,7 @@ public class ProductDaoImpl extends GenericDaoImpl<Product> implements ProductDa
     }
 
     public static ProductDao getInstance() {
-        if (instance == null) {
-            instance = new ProductDaoImpl();
-        }
+        if (instance == null) instance = new ProductDaoImpl();
         return instance;
     }
 

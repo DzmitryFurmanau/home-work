@@ -14,7 +14,6 @@ import java.util.function.Function;
 import static java.util.stream.Collectors.toList;
 
 public abstract class GenericDaoImpl<T extends BaseEntity> implements GenericDao<T> {
-
     private final Writer<String> writer;
     private final Reader<String> reader;
     private final Function<Object, T> mapper;

@@ -1,7 +1,7 @@
 package com.autoPartsStore.app.dao.impl;
 
-import com.autoPartsStore.app.domain.Seller;
 import com.autoPartsStore.app.dao.SellerDao;
+import com.autoPartsStore.app.domain.Seller;
 
 import java.util.HashSet;
 import java.util.Optional;
@@ -10,7 +10,6 @@ import java.util.Set;
 import static java.util.Optional.empty;
 
 public class SellerDaoImpl extends GenericDaoImpl<Seller> implements SellerDao {
-
     private static SellerDao instance;
 
     private SellerDaoImpl() {
@@ -24,9 +23,7 @@ public class SellerDaoImpl extends GenericDaoImpl<Seller> implements SellerDao {
     }
 
     public static SellerDao getInstance() {
-        if (instance == null) {
-            instance = new SellerDaoImpl();
-        }
+        if (instance == null) instance = new SellerDaoImpl();
         return instance;
     }
 

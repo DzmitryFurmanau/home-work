@@ -9,7 +9,6 @@ abstract public class Employee extends BaseEntity implements Serializable {
     private Integer salary;
 
     Employee() {
-
     }
 
     Employee(Long id, String name, Integer age, Integer salary) {

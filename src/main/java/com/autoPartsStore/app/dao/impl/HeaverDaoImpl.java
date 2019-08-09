@@ -10,7 +10,6 @@ import java.util.Set;
 import static java.util.Optional.empty;
 
 public class HeaverDaoImpl extends GenericDaoImpl<Heaver> implements HeaverDao {
-
     private static HeaverDao instance;
 
     private HeaverDaoImpl() {
@@ -24,9 +23,7 @@ public class HeaverDaoImpl extends GenericDaoImpl<Heaver> implements HeaverDao {
     }
 
     public static HeaverDao getInstance() {
-        if (instance == null) {
-            instance = new HeaverDaoImpl();
-        }
+        if (instance == null) instance = new HeaverDaoImpl();
         return instance;
     }
 

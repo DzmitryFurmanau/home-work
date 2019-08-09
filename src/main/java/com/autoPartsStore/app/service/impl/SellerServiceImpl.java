@@ -19,9 +19,7 @@ public class SellerServiceImpl implements SellerService {
     }
 
     public static SellerService getInstance() {
-        if (instance == null) {
-            instance = new SellerServiceImpl();
-        }
+        if (instance == null) instance = new SellerServiceImpl();
         return instance;
     }
 
@@ -32,7 +30,7 @@ public class SellerServiceImpl implements SellerService {
 
     @Override
     public boolean fire(Seller seller) {
-        //add some logic
+        //TODO add some logic
         sellerDao.delete(seller);
         return true;
 
@@ -40,14 +38,14 @@ public class SellerServiceImpl implements SellerService {
 
     @Override
     public boolean hire(Seller seller) {
-        //add some logic
+        //TODO add some logic
         sellerDao.save(seller);
         return true;
     }
 
     @Override
     public boolean promote(Seller seller) {
-        //add some logic
+        //TODO add some logic
         sellerDao.update(seller);
         return true;
     }

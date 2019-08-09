@@ -26,11 +26,15 @@ public class Main {
         main.heaverService.deleteAll();
         main.productService.deleteAll();
         main.sellerService.deleteAll();
-        main.heaverService.save(new Heaver(1L, "Heaver", 25, 25, 25));
+        //TODO why idea writes different streams to console?
+        main.heaverService.save(new Heaver(1L, "Vasiliy", 25, 500, 100));
+        main.heaverService.save(new Heaver(2L, "Pyotr", 35, 700, 100));
         main.heaverService.getAll().forEach(System.out::println);
-        main.productService.save(new Product(1L, "Product", 100, 2.5));
+        main.productService.save(new Product(1L, "Oil\"Mannol\"", 100, 10.58));
+        main.productService.save(new Product(2L, "Oil\"Lukoil\"", 100, 12.13));
         main.productService.getAll().forEach(System.out::println);
-        main.sellerService.save(new Seller(1L, "Seller", 25, 100, 1));
+        main.sellerService.save(new Seller(1L, "Nataliya", 25, 600, 1));
+        main.sellerService.save(new Seller(2L, "Tatiana", 35, 800, 2));
         main.sellerService.getAll().forEach(System.out::println);
     }
 }

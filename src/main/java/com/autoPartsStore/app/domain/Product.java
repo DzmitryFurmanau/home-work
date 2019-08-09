@@ -5,6 +5,7 @@ import com.autoPartsStore.app.annotation.FileStorage;
 import java.io.Serializable;
 
 @FileStorage(name = "Product")
+
 public class Product extends BaseEntity implements Serializable {
     private Long id;
     private String name;
@@ -12,7 +13,7 @@ public class Product extends BaseEntity implements Serializable {
     private Double price;
 
     public Product() {
-
+        super();
     }
 
     public Product(Long id, String name, Integer count, Double price) {

@@ -3,9 +3,18 @@ package com.autoPartsStore.app.domain;
 import com.autoPartsStore.app.annotation.FileStorage;
 
 @FileStorage(name = "Heaver")
-public class Heaver extends Employee {
 
+public class Heaver extends Employee {
     private Integer bonus;
+
+    public Heaver(Long id, String name, Integer age, Integer salary, Integer bonus) {
+        super(id, name, age, salary);
+        this.bonus = bonus;
+    }
+
+    public Heaver() {
+        super();
+    }
 
     @Override
     public String toString() {
@@ -16,15 +25,6 @@ public class Heaver extends Employee {
                 ", salary=" + getSalary() +
                 ", bonus=" + getBonus() +
                 '}';
-    }
-
-    public Heaver(Long id, String name, Integer age, Integer salary, Integer bonus) {
-        super(id, name, age, salary);
-        this.bonus = bonus;
-    }
-
-    public Heaver() {
-        super();
     }
 
     private Integer getBonus() {

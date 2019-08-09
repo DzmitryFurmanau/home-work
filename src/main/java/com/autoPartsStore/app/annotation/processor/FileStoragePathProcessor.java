@@ -9,16 +9,13 @@ import java.util.Optional;
 import java.util.Properties;
 
 public class FileStoragePathProcessor {
-
     private static FileStoragePathProcessor instance;
 
     private FileStoragePathProcessor() {
     }
 
     public static FileStoragePathProcessor getInstance() {
-        if (instance == null) {
-            instance = new FileStoragePathProcessor();
-        }
+        if (instance == null) instance = new FileStoragePathProcessor();
         return instance;
     }
 
@@ -40,10 +37,10 @@ public class FileStoragePathProcessor {
 
     private String getPath(String name) {
         try (InputStream input = this.getClass().getClassLoader().getResourceAsStream("application.properties")) {
-            Properties prop = new Properties();
-            prop.load(Objects.requireNonNull(input));
-            final String root = prop.getProperty("dao.file.root");
-            final String format = prop.getProperty("dao.file.format");
+            Properties properties = new Properties();
+            properties.load(Objects.requireNonNull(input));
+            final String root = properties.getProperty("dao.file.root");
+            final String format = properties.getProperty("dao.file.format");
             return root + name + format;
         } catch (IOException ex) {
             throw new RuntimeException(ex);

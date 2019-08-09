@@ -4,7 +4,6 @@ import java.util.Collection;
 import java.util.Optional;
 
 public interface GenericService<T> {
-
     Optional<T> save(T t);
 
     Optional<T> update(T t);

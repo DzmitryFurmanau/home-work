@@ -9,7 +9,6 @@ import java.io.ObjectOutputStream;
 import java.util.Collection;
 
 public class TextFileWriterImpl implements Writer<String> {
-
     private static TextFileWriterImpl instance;
 
     private TextFileWriterImpl() {
@@ -17,9 +16,7 @@ public class TextFileWriterImpl implements Writer<String> {
     }
 
     public static TextFileWriterImpl getInstance() {
-        if (instance == null) {
-            instance = new TextFileWriterImpl();
-        }
+        if (instance == null) instance = new TextFileWriterImpl();
         return instance;
     }
 

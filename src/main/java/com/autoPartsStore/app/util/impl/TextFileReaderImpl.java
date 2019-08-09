@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 public class TextFileReaderImpl implements Reader<String> {
-
     private static TextFileReaderImpl instance;
 
     private TextFileReaderImpl() {
@@ -15,9 +14,7 @@ public class TextFileReaderImpl implements Reader<String> {
     }
 
     public static TextFileReaderImpl getInstance() {
-        if (instance == null) {
-            instance = new TextFileReaderImpl();
-        }
+        if (instance == null) instance = new TextFileReaderImpl();
         return instance;
     }
 
@@ -30,7 +27,7 @@ public class TextFileReaderImpl implements Reader<String> {
                 list.add(o);
             }
         } catch (EOFException e) {
-            //empty
+            //TODO add some logic
         } catch (IOException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }

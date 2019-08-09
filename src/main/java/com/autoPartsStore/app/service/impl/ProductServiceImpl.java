@@ -20,9 +20,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     public static ProductService getInstance() {
-        if (instance == null) {
-            instance = new ProductServiceImpl();
-        }
+        if (instance == null) instance = new ProductServiceImpl();
         return instance;
     }
 

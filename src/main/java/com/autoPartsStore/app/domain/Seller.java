@@ -3,6 +3,7 @@ package com.autoPartsStore.app.domain;
 import com.autoPartsStore.app.annotation.FileStorage;
 
 @FileStorage(name = "Seller")
+
 public class Seller extends Employee {
     private Integer category;
 

@@ -19,9 +19,7 @@ public class HeaverServiceImpl implements HeaverService {
     }
 
     public static HeaverService getInstance() {
-        if (instance == null) {
-            instance = new HeaverServiceImpl();
-        }
+        if (instance == null) instance = new HeaverServiceImpl();
         return instance;
     }
 
@@ -32,21 +30,21 @@ public class HeaverServiceImpl implements HeaverService {
 
     @Override
     public boolean fire(Heaver heaver) {
-        //add some logic
+        //TODO add some logic
         heaverDao.delete(heaver);
         return true;
     }
 
     @Override
     public boolean hire(Heaver heaver) {
-        //add some logic
+        //TODO add some logic
         heaverDao.save(heaver);
         return true;
     }
 
     @Override
     public boolean promote(Heaver heaver) {
-        //add some logic
+        //TODO add some logic
         heaverDao.update(heaver);
         return true;
     }
